@@ -15,7 +15,7 @@ A short Python project with 6 beginner-friendly tasks focused on mastering the `
 | 4    |Concatenate two strings (str1 and str2) to print "Welcome to Holberton School!"|`6-concat.py`|✅ Done|
 | 5    | Extract first 3 letters, last 2 letters, and the middle part of a word|`7-edges.py`|✅ Done|
 | 6    |Reconstruct "object-oriented programming with Python" using slicing and no string literals|`8-concat_edges.py`|✅ Done|
-| 7    |    |`.py`|✅ Done|
+| 7    |Print the full Zen of Python using the import this easter egg, with a 98-character limit|`9-easter_egg.py`|✅ Done|
 ---
 
 ## Run Instructions
