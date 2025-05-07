@@ -13,7 +13,8 @@ A short Python project with 6 beginner-friendly tasks focused on mastering the `
 | 2    | Print a float with 2 digits of precision using an f-string, without casting|`4-print_float.py`|✅ Done|
 | 3    | Print 3 times a string variable using only one print() and an f-string|`5-print_string.py`|✅ Done|
 | 4    |Concatenate two strings (str1 and str2) to print "Welcome to Holberton School!"|`6-concat.py`|✅ Done|
-| 5    | *(To be filled)*                                     |              | ⬜      |
+| 5    | Extract first 3 letters, last 2 letters, and the middle part of a word|`7-edges.py`|✅ Done|
+| 6    |    |`.py`|✅ Done|
 
 ---
 
