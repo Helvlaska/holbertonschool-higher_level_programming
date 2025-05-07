@@ -14,8 +14,8 @@ A short Python project with 6 beginner-friendly tasks focused on mastering the `
 | 3    | Print 3 times a string variable using only one print() and an f-string|`5-print_string.py`|✅ Done|
 | 4    |Concatenate two strings (str1 and str2) to print "Welcome to Holberton School!"|`6-concat.py`|✅ Done|
 | 5    | Extract first 3 letters, last 2 letters, and the middle part of a word|`7-edges.py`|✅ Done|
-| 6    |    |`.py`|✅ Done|
-
+| 6    |Reconstruct "object-oriented programming with Python" using slicing and no string literals|`8-concat_edges.py`|✅ Done|
+| 7    |    |`.py`|✅ Done|
 ---
 
 ## Run Instructions
