@@ -31,8 +31,9 @@ Ce projet a pour but de maîtriser les bases de la programmation en Python à tr
 
 ## 🛠 Contenu du dossier
 
-- `conditions.py` : exercices et exemples sur les conditions.
-- `boucles.py` : exercices et exemples sur les boucles.
+- `0-positiv_or_negative.py` : exercice et exemple sur les conditions.
+- `1-last_digit.py` : exercice et exemple sur les conditions.
+- `1-last_digit.py` : exercices et exemples sur les boucles.
 - `fonctions.py` : exercices et exemples sur les fonctions.
 - `README.md` : ce fichier explicatif.
 
@@ -45,6 +46,6 @@ Ce projet a pour but de maîtriser les bases de la programmation en Python à tr
 3. Lancer les fichiers avec la commande :
 
 ```bash
-python3 conditions.py
-python3 boucles.py
+python3 0-positiv_or_negative.py
+python3 1-last_digit.py
 python3 fonctions.py
