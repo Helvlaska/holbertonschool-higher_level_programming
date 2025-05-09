@@ -22,4 +22,5 @@ def uppercase(str):
             upper_string += char
 
     # Imprimer le résultat final sans retour à la ligne supplémentaire
-    print(upper_string)
+    print("{}".format(upper_string))
+
