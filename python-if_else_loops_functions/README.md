@@ -34,7 +34,9 @@ Ce projet a pour but de maîtriser les bases de la programmation en Python à tr
 - `0-positiv_or_negative.py` : exercice et exemple sur les conditions.
 - `1-last_digit.py` : exercice et exemple sur les conditions.
 - `2-print_alphabet.py` : exercice et exemple sur les boucles.
-- `fonctions.py` : exercices et exemples sur les fonctions.
+- `3-print_alphabt.py` : exercice et exemple sur les boucles.
+- `4-print_hexa.py` : exercice et exemple sur les boucles.
+- `5-print_comb2.py` : exercice et exemple sur les boucles et conditions.
 - `README.md` : ce fichier explicatif.
 
 ---
@@ -49,3 +51,6 @@ Ce projet a pour but de maîtriser les bases de la programmation en Python à tr
 python3 0-positiv_or_negative.py
 python3 1-last_digit.py
 python3 2-print_alphabet.py
+python3 3-print_alphabt.py
+python3 4-print_hexa.py
+python3 5-print_comb2.py
