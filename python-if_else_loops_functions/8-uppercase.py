@@ -15,12 +15,11 @@ def uppercase(str):
             # En soustrayant 32 de la valeur ASCII
             new_char = chr(ascii_value - 32)
 
-            # Ajouter le caractère modifié (majuscule) dans la chaîne de résultat
+            # Ajouter le caractère modifié (majuscule) dans la string
             upper_string += new_char
         else:
-            # Si ce n'est pas une lettre minuscule, on garde le caractère tel quel
+            # Si ce n'est pas une lettre minuscule, on garde le char tel quel
             upper_string += char
 
     # Imprimer le résultat final sans retour à la ligne supplémentaire
     print("{}".format(upper_string))
-
