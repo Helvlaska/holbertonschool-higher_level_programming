@@ -9,4 +9,3 @@ def print_matrix_integer(matrix=[[]]):
                 print(" ", end="")
             i += 1
         print()
-
