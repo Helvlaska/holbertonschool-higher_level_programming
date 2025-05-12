@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def new_in_list(my_list, idx, element):
-    b = list(my_list) #copie de la liste originale
+    b = my_list.copy() #copie de la liste originale
     if idx < 0 or idx >= len(b):
         return b
     else:
