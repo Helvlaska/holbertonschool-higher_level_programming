@@ -19,6 +19,8 @@ def roman_to_int(roman_string):
             if i > 0 and pr_char == 'I' and (char == 'V' or char == 'X'):
                 twist = dict_trad[char] - 2
                 result = result + twist
+            elif i > 0 and pr_char == 'X' and char == 'C':
+                result = result + (dict_trad[char] - 20)
             else:
                 result = result + dict_trad[char]
     return result
