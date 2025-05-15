@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if not isinstance(roman_string, str) or roman_string is None:
+        return 0
     result = 0
     dict_trad = {
         'I': 1,
@@ -19,6 +21,4 @@ def roman_to_int(roman_string):
                 result = result + twist
             else:
                 result = result + dict_trad[char]
-        else:
-            return 0
     return result
