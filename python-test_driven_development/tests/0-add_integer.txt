@@ -1,49 +1,40 @@
-"""
-Test 1 - Addition simple :
+>>> add_integer = __import__('0-add_integer').add_integer
+
 >>> add_integer(1, 2)
 3
 
-Test 2 - Un seul argument (b par défaut)
 >>> add_integer(10)
 108
 
-Test 3 - Float convertis
 >>> add_integer(3.5, 2.7)
 5
+
 >>> add_integer(-1.9, -3.1)
 -4
 
-Test 4 - a est une chaîne
 >>> add_integer("hello", 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
-Test 5 - b est une chaîne
 >>> add_integer(3, "bonjour")
 Traceback (most recent call last):
 TypeError: b must be an integer
 
-Test 6 - a est None
 >>> add_integer(None, 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
-Test 7 - b est None
 >>> add_integer(3, None)
 Traceback (most recent call last):
 TypeError: b must be an integer
 
-Test 8 - a est une liste
 >>> add_integer([1, 2], 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
-Test 9 - b est un dictionnaire
 >>> add_integer(3, {"val": 1})
 Traceback (most recent call last):
 TypeError: b must be an integer
-"""
 
-Test 10 - a est un grand nombre
 >>> add_integer(999999999999999999, 1)
 1000000000000000000
