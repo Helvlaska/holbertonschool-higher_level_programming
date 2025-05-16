@@ -36,3 +36,22 @@ Great.
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
+
+>>> text_indentation("Hello...World")
+Hello...
+<BLANKLINE>
+<BLANKLINE>
+World
+
+>>> text_indentation("Hello .   ")
+Hello.
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("Hello... How are you??")
+Hello...
+<BLANKLINE>
+<BLANKLINE>
+How are you??
+<BLANKLINE>
+<BLANKLINE>
