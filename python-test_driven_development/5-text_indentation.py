@@ -15,13 +15,29 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     buffer = ""
-    for char in text:
-        buffer += char
-        if char in ".?:":  # On a atteint une ponctuation à traiter
-            print(buffer.strip())  # on nettoie les espaces autour
-            print()
-            print()
-            buffer = ""  # On vide le buffer
+    i = 0
+    while i < len(text):
+        char = text[i]
 
-    if buffer.strip():  # S'il reste quelque chose sans ponctuation finale
+        # Si on est sur une ponctuation, on s'assure que l'espace avant est supprimé
+        if char in ".?:":
+            buffer = buffer.rstrip()  # Supprime les espaces à droite AVANT d'ajouter la ponctuation
+            buffer += char
+
+            # Ajoute toutes les ponctuations qui suivent
+            while i + 1 < len(text) and text[i + 1] in ".?:":
+                i += 1
+                buffer += text[i]
+
+            # Affichage du bloc propre
+            print(buffer.strip())
+            print()
+            print()
+            buffer = ""  # Réinitialiser
+        else:
+            buffer += char
+
+        i += 1
+
+    if buffer.strip():
         print(buffer.strip())
