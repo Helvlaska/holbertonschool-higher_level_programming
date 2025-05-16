@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module provides text_indentation."""
+
 
 def text_indentation(text):
     """
