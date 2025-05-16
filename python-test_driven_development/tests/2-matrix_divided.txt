@@ -79,3 +79,44 @@ Test 17 – matrix contient un élément qui n’est pas une liste du tout :
 >>> matrix_divided([[1, 2], 3], 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 18 – div négatif :
+>>> matrix_divided([[2, 4], [6, 8]], -2)
+[[-1.0, -2.0], [-3.0, -4.0]]
+
+Test 19 – Matrice avec un seul élément :
+>>> matrix_divided([[9]], 3)
+[[3.0]]
+
+Test 20 – div est un float avec beaucoup de chiffres :
+>>> matrix_divided([[10, 20], [30, 40]], 2.345)
+[[4.26, 8.53], [12.79, 17.06]]
+
+Test 21 – Matrice avec un zéro :
+>>> matrix_divided([[0, 2], [4, 6]], 2)
+[[0.0, 1.0], [2.0, 3.0]]
+
+Test 22 – Float proche du zéro mais valide :
+>>> matrix_divided([[1, 2], [3, 4]], 0.001)
+[[1000.0, 2000.0], [3000.0, 4000.0]]
+
+Test 23 – div est None :
+>>> matrix_divided([[1, 2], [3, 4]], None)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Test 24 – div est une liste :
+>>> matrix_divided([[1, 2], [3, 4]], [1])
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Test 25 – div est un dictionnaire :
+>>> matrix_divided([[1, 2], [3, 4]], {"val": 2})
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Test 26 – div est un objet lambda :
+>>> matrix_divided([[1, 2], [3, 4]], lambda x: x)
+Traceback (most recent call last):
+TypeError: div must be a number
+
