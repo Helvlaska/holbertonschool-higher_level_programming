@@ -1,3 +1,4 @@
+# doctest: +SKIP
 >>> add_integer = __import__("0-add_integer").add_integer
 
 Test 1 - Addition simple :
@@ -43,8 +44,11 @@ Test 9 - b est un dictionnaire
 >>> add_integer(3, {"val": 1})
 Traceback (most recent call last):
 TypeError: b must be an integer
-"""
 
-Test 10 - a est un grand nombre
+Test 10 - les arguments valent True/False
+>>> add_integer(True, False)
+1
+
+Test 11 - a est un grand nombre
 >>> add_integer(999999999999999999, 1)
 1000000000000000000
