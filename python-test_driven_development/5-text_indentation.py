@@ -18,27 +18,30 @@ def text_indentation(text):
 
     buffer = ""
     i = 0
+
     while i < len(text):
         char = text[i]
 
         if char in ".?:":
+            # Supprimer les espaces à droite avant d'ajouter la ponctuation
             buffer = buffer.rstrip()
             buffer += char
 
-            # Ajoute toutes les ponctuations qui suivent
+            # Ajouter les ponctuations successives si elles suivent directement
             while i + 1 < len(text) and text[i + 1] in ".?:":
                 i += 1
                 buffer += text[i]
 
-            # Affichage du bloc propre
+            # Affichage du bloc nettoyé
             print(buffer.strip())
             print()
             print()
-            buffer = ""  # Réinitialiser
+            buffer = ""  # Réinitialiser le buffer après impression
         else:
             buffer += char
 
         i += 1
 
+    # Si du texte reste après la dernière ponctuation
     if buffer.strip():
         print(buffer.strip())
