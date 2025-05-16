@@ -43,3 +43,7 @@ Test 9 - b est un dictionnaire
 Traceback (most recent call last):
 TypeError: b must be an integer
 """
+
+Test 10 - a est un grand nombre
+>>> add_integer(999999999999999999, 1)
+1000000000000000000
