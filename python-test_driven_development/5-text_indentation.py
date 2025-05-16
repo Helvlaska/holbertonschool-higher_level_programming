@@ -19,9 +19,8 @@ def text_indentation(text):
     while i < len(text):
         char = text[i]
 
-        # Si on est sur une ponctuation, on s'assure que l'espace avant est supprimé
         if char in ".?:":
-            buffer = buffer.rstrip()  # Supprime les espaces à droite AVANT d'ajouter la ponctuation
+            buffer = buffer.rstrip()
             buffer += char
 
             # Ajoute toutes les ponctuations qui suivent
