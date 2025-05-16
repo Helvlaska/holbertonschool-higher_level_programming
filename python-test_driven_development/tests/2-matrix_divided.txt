@@ -1,0 +1,66 @@
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Test 1 - Matrice simple entière :
+>>> matrix_divided([[1, 2], [3, 4]], 2)
+[[0.5, 1.0], [1.5, 2.0]]
+
+Test 2 - Matrice avec float :
+>>> matrix_divided([[1.5, 2.0], [3.0, 4.5]], 1.5)
+[[1.0, 1.33], [2.0, 3.0]]
+
+Test 3 - Matrice avec float + arrondi :
+>>> matrix_divided([[1, 2], [3, 4]], 3)
+[[0.33, 0.67], [1.0, 1.33]]
+
+Test 4 - division par 0 :
+>>> matrix_divided([[1, 2], [3, 4]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Test 5 - div n’est pas un nombre :
+>>> matrix_divided([[1, 2], [3, 4]], "3")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Test 6 - la matrice n’est pas une liste :
+>>> matrix_divided("je ne suis pas une liste", 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 7 - une ligne n’est pas une liste :
+>>> matrix_divided([1, 2], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 8 - un élément n’est pas un nombre :
+>>> matrix_divided([[1, "2"], [3, 4]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 9 - lignes de tailles différentes :
+>>> matrix_divided([[1, 2], [3]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Test 10 - Matrix vide :
+>>> matrix_divided([], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 11 – Une ligne vide dans la matrice :
+>>> matrix_divided([[1, 2], []], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Test 12 – Résultat avec beaucoup de décimales :
+>>> matrix_divided([[1, 2], [3, 4]], 3)
+[[0.33, 0.67], [1.0, 1.33]]
+
+Test 13 – Une seule ligne :
+>>> matrix_divided([[10, 20]], 5)
+[[2.0, 4.0]]
+
+Test 14 – Matrice de booléens (à refuser) :
+>>> matrix_divided([[True, False], [1, 0]], 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
