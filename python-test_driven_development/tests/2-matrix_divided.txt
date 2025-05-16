@@ -39,3 +39,9 @@ ZeroDivisionError: division by zero
 
 >>> matrix_divided([[5]], 2)
 [[2.5]]
+
+# Test : présence de booléens dans la matrice
+>>> matrix_divided([[True, False], [1, 2]], 1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
