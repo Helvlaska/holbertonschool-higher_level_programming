@@ -64,3 +64,18 @@ Test 14 – Matrice de booléens (à refuser) :
 >>> matrix_divided([[True, False], [1, 0]], 1)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 15 – div est un booléen :
+>>> matrix_divided([[1, 2], [3, 4]], True)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Test 16 – élément None dans une cellule :
+>>> matrix_divided([[1, None], [3, 4]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 17 – matrix contient un élément qui n’est pas une liste du tout :
+>>> matrix_divided([[1, 2], 3], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
