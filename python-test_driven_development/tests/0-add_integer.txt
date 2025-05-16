@@ -1,28 +1,45 @@
+"""
 Test 1 - Addition simple :
-a = 1, b = 2 → Résultat attendu : 3
+>>> add_integer(1, 2)
+3
 
-Test 2 - Un seul argument fourni :
-a = 10 → Résultat attendu : 108
+Test 2 - Un seul argument (b par défaut)
+>>> add_integer(10)
+108
 
-Test 3 - Float convertis en int :
-a = 3.5, b = 2.7 → Résultat attendu : 5 (int(3.5) + int(2.7))
+Test 3 - Float convertis
+>>> add_integer(3.5, 2.7)
+5
+>>> add_integer(-1.9, -3.1)
+-4
 
-a = -1.9, b = -3.1 → Résultat attendu : -4 (int(-1.9) + int(-3.1))
+Test 4 - a est une chaîne
+>>> add_integer("hello", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
 
-Test 4 - a est une chaîne :
-a = "hello", b = 3 → Erreur attendue : TypeError("a must be an integer")
+Test 5 - b est une chaîne
+>>> add_integer(3, "bonjour")
+Traceback (most recent call last):
+TypeError: b must be an integer
 
-Test 5 - b est une chaîne :
-a = 3, b = "bonjour" → Erreur attendue : TypeError("b must be an integer")
+Test 6 - a est None
+>>> add_integer(None, 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
 
-Test 6 - a est None :
-a = None, b = 3 → Erreur attendue : TypeError("a must be an integer")
+Test 7 - b est None
+>>> add_integer(3, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
 
-Test 7 - b est None :
-a = 3, b = None → Erreur attendue : TypeError("b must be an integer")
+Test 8 - a est une liste
+>>> add_integer([1, 2], 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
 
-Test 8 - a est une liste :
-a = [1, 2], b = 3 → Erreur attendue : TypeError("a must be an integer")
-
-Test 9 - b est un dictionnaire :
-a = 3, b = {"val": 1} → Erreur attendue : TypeError("b must be an integer")
+Test 9 - b est un dictionnaire
+>>> add_integer(3, {"val": 1})
+Traceback (most recent call last):
+TypeError: b must be an integer
+"""
