@@ -6,8 +6,9 @@ pour représenter un Rectangle géométrique.
 
 
 class Rectangle:
-    """
-    Creation d'une class Rectangle vide
+    """Classe représentant un rectangle avec
+    largeur et hauteur, incluant validations.
+
     """
 
     def __init__(self, width=0, height=0):
@@ -47,9 +48,9 @@ class Rectangle:
             ValueError: Si value est < 0.
         """
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @height.setter
@@ -64,7 +65,7 @@ class Rectangle:
             ValueError: Si value est < 0.
         """
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
