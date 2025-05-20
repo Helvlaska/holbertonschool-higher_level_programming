@@ -1,0 +1,105 @@
+#!/usr/bin/python3
+"""
+Module contenant la classe Square
+pour représenter un carré géométrique.
+"""
+
+
+class Square:
+    """Classe représentant un carré.
+
+    Attributes:
+        __size (int): La taille du carré.
+        __position (tuple): Position du carré à l'affichage.
+    """
+
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialise un nouveau carré.
+
+        Args:
+            size (int): La taille du carré.
+
+        Raises:
+            TypeError: Si size n'est pas un entier.
+            ValueError: Si size est inférieur à 0.
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.size = size
+        self.position = position
+
+    @property
+    def size(self):
+        """Retourne la taille du carré."""
+        return self.__size
+
+    @property
+    def position(self):
+        """Retourne la position du carré."""
+        return self.__position
+
+    @size.setter
+    def size(self, value):
+        """Définit la taille du carré avec validation.
+
+        Args:
+            value (int): Nouvelle taille du carré.
+
+        Raises:
+            TypeError: Si value n'est pas un entier.
+            ValueError: Si value est < 0.
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+    @position.setter
+    def position(self, value):
+        """Définit la position du carré avec validation.
+
+        Args:
+            value (tuple): Tuple de deux entiers positifs.
+
+        Raises:
+            TypeError: Si value n'est pas un tuple de 2 entiers >= 0.
+        """
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+        self.__position = value
+
+    def area(self):
+        """Calcule et retourne l'aire du carré.
+
+        Returns:
+            int: L'aire du carré.
+        """
+        return self.__size ** 2
+
+    def my_print(self):
+        """Imprime le carré avec le caractère #,
+        en tenant compte de la position.
+        """
+        if self.__size == 0:
+            print()
+            return
+
+        for _ in range(self.__position[1]):
+            print()
+
+        for _ in range(self.__size):
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
