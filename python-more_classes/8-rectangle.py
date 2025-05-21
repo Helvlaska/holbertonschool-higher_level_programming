@@ -120,9 +120,9 @@ class Rectangle:
         Retourne le plus grand rectangle (ou rect_1 s'ils sont égaux)
         """
         if not isinstance(rect_1, Rectangle):
-            raise TypeError(f"{rect_1} must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError(f"{rect_2} must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return rect_1
         else:
