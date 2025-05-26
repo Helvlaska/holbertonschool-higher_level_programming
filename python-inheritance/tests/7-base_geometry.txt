@@ -57,3 +57,9 @@ TypeError: actif must be an integer
 Traceback (most recent call last):
 ...
 TypeError: collection must be an integer
+
+# 🧪 Test avec un dictionnaire
+>>> bg.integer_validator("params", {"key": "value"})
+Traceback (most recent call last):
+...
+TypeError: params must be an integer
