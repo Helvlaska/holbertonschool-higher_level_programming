@@ -11,6 +11,12 @@ True
 >>> type(bg).__name__
 'BaseGeometry'
 
-# 🧪 Test que bg possède les bonnes méthodes
->>> hasattr(bg, "area") and hasattr(bg, "integer_validator")
-True
+# ---------------------------------------
+# TEST SUR LA METHODE AREA
+# ---------------------------------------
+
+# 🧪 Test de la méthode area (doit lever une exception)
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
