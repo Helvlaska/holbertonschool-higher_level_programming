@@ -34,8 +34,8 @@ Traceback (most recent call last):
 ...
 TypeError: poids must be an integer
 
-# 🧪 Test avec une valeur non entière
->>> bg.integer_validator("age", "20")
+# 🧪 integer_validator avec (None, None)
+>>> bg.integer_validator(None, None)
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: None must be an integer
