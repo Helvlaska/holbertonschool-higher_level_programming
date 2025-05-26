@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Création d'une fonction qui renvoie True
 si l'objet est une instance de la classe spécifiée
-sinon false 
+sinon false
 """
 
 
