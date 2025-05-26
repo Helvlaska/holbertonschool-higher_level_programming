@@ -10,3 +10,7 @@
 True
 >>> type(bg).__name__
 'BaseGeometry'
+
+# 🧪 Test que bg possède les bonnes méthodes
+>>> hasattr(bg, "area") and hasattr(bg, "integer_validator")
+True
