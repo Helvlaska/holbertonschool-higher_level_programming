@@ -1,0 +1,51 @@
+>>> from 1-my_list import MyList
+
+# 🧱 1. Création et héritage
+>>> ml = MyList()
+>>> isinstance(ml, list)
+True
+>>> type(ml).__name__
+'MyList'
+
+# 📊 2. Contenu et comportement de base
+>>> ml.append(5)
+>>> ml.append(2)
+>>> ml.append(8)
+>>> ml.append(3)
+>>> ml
+[5, 2, 8, 3]
+>>> ml.print_sorted()
+[2, 3, 5, 8]
+>>> ml
+[5, 2, 8, 3]
+
+# 🧪 3. Cas limites
+
+## Liste vide
+>>> empty = MyList()
+>>> empty.print_sorted()
+[]
+
+## Liste avec doublons
+>>> doubles = MyList()
+>>> doubles.extend([4, 2, 4, 1, 2])
+>>> doubles.print_sorted()
+[1, 2, 2, 4, 4]
+
+## Liste déjà triée
+>>> sorted_list = MyList()
+>>> sorted_list.extend([1, 2, 3, 4])
+>>> sorted_list.print_sorted()
+[1, 2, 3, 4]
+
+## Liste triée à l'envers
+>>> reverse = MyList()
+>>> reverse.extend([5, 4, 3, 2, 1])
+>>> reverse.print_sorted()
+[1, 2, 3, 4, 5]
+
+# 🔥 4. Cas spécial : un seul élément
+>>> only_element = MyList()
+>>> only_element.append(42)
+>>> only_element.print_sorted()
+[42]
