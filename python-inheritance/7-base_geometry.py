@@ -17,13 +17,14 @@ class BaseGeometry():
         encore défini.
         """
         raise Exception("area() is not implemented")
-    
+
     def integer_validator(self, name, value):
         """
         Valide que `value` est un entier strictement positif.
 
         Args:
-            name (str): Le nom de l'attribut (utilisé dans les messages d'erreur).
+            name (str): Le nom de l'attribut (utilisé dans
+            les messages d'erreur).
             value (int): La valeur à valider.
 
         Raises:
