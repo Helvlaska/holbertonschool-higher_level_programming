@@ -46,8 +46,5 @@ Traceback (most recent call last):
 ...
 ValueError: size must be greater than 0
 
-# 🧪 Test avec une valeur inferieur a 0
->>> bg.integer_validator("hauteur", -10)
-Traceback (most recent call last):
-...
-ValueError: hauteur must be greater than 0
+# 🧪 Test avec un entier très grand
+>>> bg.integer_validator("big", 10_000_000)
