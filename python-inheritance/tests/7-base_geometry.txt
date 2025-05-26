@@ -56,6 +56,9 @@ TypeError: prix must be an integer
 
 # 🧪 Test avec un booléen
 >>> bg.integer_validator("actif", True)
+Traceback (most recent call last):
+...
+TypeError: actif must be an integer
 
 # 🧪 Test avec une liste
 >>> bg.integer_validator("collection", [1, 2, 3])
