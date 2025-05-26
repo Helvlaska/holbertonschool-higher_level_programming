@@ -34,8 +34,6 @@ Traceback (most recent call last):
 ...
 TypeError: poids must be an integer
 
->>> bg.integer_validator("name", int(1.8))
-
 # 🧪 integer_validator avec (None, None)
 >>> bg.integer_validator(None, None)
 Traceback (most recent call last):
@@ -66,3 +64,6 @@ Traceback (most recent call last):
 ...
 TypeError: ensemble must be an integer
 
+>>> bg = BaseGeometry(5)
+Traceback (most recent call last):
+TypeError: BaseGeometry() takes no arguments
