@@ -26,3 +26,24 @@ ValueError: size must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: length must be greater than 0
+
+# 🧪 Test que bg est bien une instance de BaseGeometry
+>>> isinstance(bg, BaseGeometry)
+True
+
+# 🧪 Test que bg possède les bonnes méthodes
+>>> hasattr(bg, "area") and hasattr(bg, "integer_validator")
+True
+
+# 🧪 Test que name est bien utilisé dans les messages d'erreur
+>>> bg.integer_validator("poids", "lourd")
+Traceback (most recent call last):
+...
+TypeError: poids must be an integer
+>>> bg.integer_validator("hauteur", -10)
+Traceback (most recent call last):
+...
+ValueError: hauteur must be greater than 0
+
+# 🧪 Test avec un entier très grand
+>>> bg.integer_validator("big", 10_000_000)
