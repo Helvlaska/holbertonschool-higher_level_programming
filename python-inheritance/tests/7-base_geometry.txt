@@ -12,7 +12,7 @@ True
 'BaseGeometry'
 
 # ---------------------------------------
-# TEST SUR LA METHODE AREA
+# TEST SUR LA METHODE AREA (y a moyen d'aller chercher le check 11 ici ✅)
 # ---------------------------------------
 
 # 🧪 Test de la méthode area (doit lever une exception)
@@ -25,8 +25,16 @@ Exception: area() is not implemented
 # TEST SUR LA METHODE INTEGER_VALIDATOR
 # ---------------------------------------
 
+(y a moyen d'aller chercher le check 21 ici ✅)
+
 # 🧪 Test que name est bien utilisé dans les messages d'erreur
 >>> bg.integer_validator("poids", "lourd")
 Traceback (most recent call last):
 ...
 TypeError: poids must be an integer
+
+# TEST SUR L'ARGUMENT VALUE DE INTEGER_VALIDATOR
+# ------------------------------------------------
+
+# 🧪 Test de integer_validator avec des valeurs valides
+>>> bg.integer_validator("width", 10)
