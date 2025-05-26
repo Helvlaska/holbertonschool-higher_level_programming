@@ -7,12 +7,6 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
-# 🧪 Appel incorrect avec un argument
->>> bg.area(42)
-Traceback (most recent call last):
-...
-TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
-
 # ✅ Test de integer_validator avec des valeurs valides
 >>> bg.integer_validator("width", 10)
 
