@@ -58,8 +58,9 @@ Traceback (most recent call last):
 ...
 TypeError: collection must be an integer
 
-# 🧪 Test avec str
->>> bg.integer_validator('name', 'string')
+# 🧪 Test avec un tuple
+>>> bg.integer_validator("ensemble", (1, 2))
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: ensemble must be an integer
+
