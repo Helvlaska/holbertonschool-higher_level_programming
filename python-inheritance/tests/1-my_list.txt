@@ -50,3 +50,11 @@ True
 >>> only_element.append(42)
 >>> only_element.print_sorted()
 [42]
+
+# 🚫 Cas non prévu : éléments non-entiers
+>>> mixed = MyList()
+>>> mixed.extend([3, "a", 5])
+>>> mixed.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
