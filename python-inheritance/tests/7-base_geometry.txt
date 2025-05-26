@@ -58,8 +58,8 @@ Traceback (most recent call last):
 ...
 TypeError: collection must be an integer
 
-# 🧪 Test avec un dictionnaire
->>> bg.integer_validator("params", {"key": "value"})
+# 🧪 Test avec str
+>>> bg.integer_validator('name', 'string')
 Traceback (most recent call last):
 ...
-TypeError: params must be an integer
+TypeError: name must be an integer
