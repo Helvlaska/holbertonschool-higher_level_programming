@@ -19,4 +19,4 @@ def inherits_from(obj, a_class):
         False : L'objet n'est pas une instance de la classe qui
         à hérité de la classe spécifiée.
     """
-    return issubclass(type(obj), a_class)
+    return issubclass(type(obj), a_class) and type(obj) is not a_class
