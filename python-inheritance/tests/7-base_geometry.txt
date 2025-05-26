@@ -46,5 +46,8 @@ Traceback (most recent call last):
 ...
 ValueError: size must be greater than 0
 
-# 🧪 Test avec un entier très grand
->>> bg.integer_validator("big", 10_000_000)
+# 🧪 Test avec un float
+>>> bg.integer_validator("prix", 3.14)
+Traceback (most recent call last):
+...
+TypeError: prix must be an integer
