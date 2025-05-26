@@ -77,3 +77,39 @@ TypeError: params must be an integer
 Traceback (most recent call last):
 ...
 TypeError: valeur must be an integer
+
+# 🧪 integer_validator avec str
+>>> bg.integer_validator('name', 'string')
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+# 🧪 integer_validator avec float
+>>> bg.integer_validator('ratio', 3.14)
+Traceback (most recent call last):
+...
+TypeError: ratio must be an integer
+
+# 🧪 integer_validator avec list
+>>> bg.integer_validator('items', [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: items must be an integer
+
+# 🧪 integer_validator avec 0
+>>> bg.integer_validator('zero', 0)
+Traceback (most recent call last):
+...
+ValueError: zero must be greater than 0
+
+# 🧪 integer_validator avec < 0
+>>> bg.integer_validator('negative', -10)
+Traceback (most recent call last):
+...
+ValueError: negative must be greater than 0
+
+# 🧪 integer_validator avec un tuple
+>>> bg.integer_validator("ensemble", (1, 2))
+Traceback (most recent call last):
+...
+TypeError: ensemble must be an integer
