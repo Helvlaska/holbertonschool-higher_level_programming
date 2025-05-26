@@ -1,11 +1,41 @@
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> bg = BaseGeometry()
+
+# ---------------------------------------
+# TEST SUR LA CLASSE BASEGEOMETRY
+# ---------------------------------------
+
+# 🧪 Test que bg est bien une instance de BaseGeometry
+>>> isinstance(bg, BaseGeometry)
+True
+
+# 🧪 Test que bg possède les bonnes méthodes
+>>> hasattr(bg, "area") and hasattr(bg, "integer_validator")
+True
+
+# ---------------------------------------
+# TEST SUR LA METHODE AREA
+# ---------------------------------------
 
 # 🧪 Test de la méthode area (doit lever une exception)
->>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+# ---------------------------------------
+# TEST SUR LA METHODE INTEGER_VALIDATOR
+# ---------------------------------------
+
+# 🧪 Test que name est bien utilisé dans les messages d'erreur
+>>> bg.integer_validator("poids", "lourd")
+Traceback (most recent call last):
+...
+TypeError: poids must be an integer
+>>> bg.integer_validator("hauteur", -10)
+Traceback (most recent call last):
+...
+ValueError: hauteur must be greater than 0
 
 # ✅ Test de integer_validator avec des valeurs valides
 >>> bg.integer_validator("width", 10)
@@ -26,24 +56,6 @@ ValueError: size must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: length must be greater than 0
-
-# 🧪 Test que bg est bien une instance de BaseGeometry
->>> isinstance(bg, BaseGeometry)
-True
-
-# 🧪 Test que bg possède les bonnes méthodes
->>> hasattr(bg, "area") and hasattr(bg, "integer_validator")
-True
-
-# 🧪 Test que name est bien utilisé dans les messages d'erreur
->>> bg.integer_validator("poids", "lourd")
-Traceback (most recent call last):
-...
-TypeError: poids must be an integer
->>> bg.integer_validator("hauteur", -10)
-Traceback (most recent call last):
-...
-ValueError: hauteur must be greater than 0
 
 # 🧪 Test avec un entier très grand
 >>> bg.integer_validator("big", 10_000_000)
@@ -83,30 +95,6 @@ TypeError: valeur must be an integer
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
-
-# 🧪 integer_validator avec float
->>> bg.integer_validator('ratio', 3.14)
-Traceback (most recent call last):
-...
-TypeError: ratio must be an integer
-
-# 🧪 integer_validator avec list
->>> bg.integer_validator('items', [1, 2, 3])
-Traceback (most recent call last):
-...
-TypeError: items must be an integer
-
-# 🧪 integer_validator avec 0
->>> bg.integer_validator('zero', 0)
-Traceback (most recent call last):
-...
-ValueError: zero must be greater than 0
-
-# 🧪 integer_validator avec < 0
->>> bg.integer_validator('negative', -10)
-Traceback (most recent call last):
-...
-ValueError: negative must be greater than 0
 
 # 🧪 integer_validator avec un tuple
 >>> bg.integer_validator("ensemble", (1, 2))
