@@ -52,6 +52,9 @@ Traceback (most recent call last):
 ...
 TypeError: None must be an integer
 
+# 🧪 integer_validator avec (None, 12)
+>>> bg.integer_validator(None, 12)
+
 # ❌ Test avec une valeur <= 0
 >>> bg.integer_validator("size", 0)
 Traceback (most recent call last):
