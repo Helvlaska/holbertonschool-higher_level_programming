@@ -1,22 +1,23 @@
->>> from 1-my_list import MyList
+# doctest: +SKIP
+>>> MyList = __import__("1-my_list").MyList
 
 # 🧱 1. Création et héritage
->>> ml = MyList()
->>> isinstance(ml, list)
+>>> my_list = MyList()
+>>> isinstance(my_list, list)
 True
->>> type(ml).__name__
+>>> type(my_list).__name__
 'MyList'
 
 # 📊 2. Contenu et comportement de base
->>> ml.append(5)
->>> ml.append(2)
->>> ml.append(8)
->>> ml.append(3)
->>> ml
+>>> my_list.append(5)
+>>> my_list.append(2)
+>>> my_list.append(8)
+>>> my_list.append(3)
+>>> my_list
 [5, 2, 8, 3]
->>> ml.print_sorted()
+>>> my_list.print_sorted()
 [2, 3, 5, 8]
->>> ml
+>>> my_list
 [5, 2, 8, 3]
 
 # 🧪 3. Cas limites
