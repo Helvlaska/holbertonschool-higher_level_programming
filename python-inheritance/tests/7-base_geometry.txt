@@ -8,6 +8,8 @@
 # 🧪 Test que bg est bien une instance de BaseGeometry
 >>> isinstance(bg, BaseGeometry)
 True
+>>> type(bg).__name__
+'BaseGeometry'
 
 # 🧪 Test que bg possède les bonnes méthodes
 >>> hasattr(bg, "area") and hasattr(bg, "integer_validator")
@@ -32,15 +34,14 @@ Exception: area() is not implemented
 Traceback (most recent call last):
 ...
 TypeError: poids must be an integer
->>> bg.integer_validator("hauteur", -10)
-Traceback (most recent call last):
-...
-ValueError: hauteur must be greater than 0
 
-# ✅ Test de integer_validator avec des valeurs valides
+# TEST SUR L'ARGUMENT VALUE DE INTEGER_VALIDATOR
+# ------------------------------------------------
+
+# 🧪 Test de integer_validator avec des valeurs valides
 >>> bg.integer_validator("width", 10)
 
-# ❌ Test avec une valeur non entière
+# 🧪 Test avec une valeur non entière
 >>> bg.integer_validator("age", "20")
 Traceback (most recent call last):
 ...
@@ -61,16 +62,17 @@ Traceback (most recent call last):
 ...
 TypeError: valeur must be an integer
 
-# ❌ Test avec une valeur <= 0
+# 🧪 Test avec une valeur <= 0
 >>> bg.integer_validator("size", 0)
 Traceback (most recent call last):
 ...
 ValueError: size must be greater than 0
 
->>> bg.integer_validator("length", -5)
+# 🧪 Test avec une valeur inferieur a 0
+>>> bg.integer_validator("hauteur", -10)
 Traceback (most recent call last):
 ...
-ValueError: length must be greater than 0
+ValueError: hauteur must be greater than 0
 
 # 🧪 Test avec un entier très grand
 >>> bg.integer_validator("big", 10_000_000)
@@ -99,13 +101,13 @@ Traceback (most recent call last):
 ...
 TypeError: params must be an integer
 
-# 🧪 integer_validator avec str
+# 🧪 Test avec str
 >>> bg.integer_validator('name', 'string')
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
 
-# 🧪 integer_validator avec un tuple
+# 🧪 Test avec un tuple
 >>> bg.integer_validator("ensemble", (1, 2))
 Traceback (most recent call last):
 ...
