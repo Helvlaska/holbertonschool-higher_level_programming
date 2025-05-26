@@ -77,3 +77,23 @@ TypeError: params must be an integer
 Traceback (most recent call last):
 ...
 TypeError: valeur must be an integer
+
+# 🧪 Test isinstance()
+>>> isinstance(True, int)
+True
+
+# 🧪 Test issubclass()
+>>> issubclass(bool, int)
+True
+
+# 🧪 Test type() avec comparaison stricte
+>>> type(True) is int
+False
+
+# 🧪 Test type() avec bool
+>>> type(True) is bool
+True
+
+# 🧪 Test type() avec int
+>>> type(10) is int
+True
