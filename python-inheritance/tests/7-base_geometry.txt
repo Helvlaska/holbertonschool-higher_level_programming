@@ -20,3 +20,13 @@ True
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+# ---------------------------------------
+# TEST SUR LA METHODE INTEGER_VALIDATOR
+# ---------------------------------------
+
+# 🧪 Test que name est bien utilisé dans les messages d'erreur
+>>> bg.integer_validator("poids", "lourd")
+Traceback (most recent call last):
+...
+TypeError: poids must be an integer
