@@ -55,9 +55,11 @@ TypeError: None must be an integer
 # 🧪 integer_validator avec (None, 12)
 >>> bg.integer_validator(None, 12)
 
-# 🧪 integer_validator avec un seul paramètre (, None)
->>> bg.integer_validator(, None)
-SyntaxError: invalid syntax
+# 🧪 integer_validator avec ("valeur", None)
+>>> bg.integer_validator("valeur", None)
+Traceback (most recent call last):
+...
+TypeError: valeur must be an integer
 
 # ❌ Test avec une valeur <= 0
 >>> bg.integer_validator("size", 0)
@@ -96,12 +98,6 @@ TypeError: collection must be an integer
 Traceback (most recent call last):
 ...
 TypeError: params must be an integer
-
-# 🧪 Test avec None
->>> bg.integer_validator("valeur", None)
-Traceback (most recent call last):
-...
-TypeError: valeur must be an integer
 
 # 🧪 integer_validator avec str
 >>> bg.integer_validator('name', 'string')
