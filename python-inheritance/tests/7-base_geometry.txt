@@ -1,2 +1,12 @@
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> bg = BaseGeometry()
+
+# ---------------------------------------
+# TEST SUR LA CLASSE BASEGEOMETRY
+# ---------------------------------------
+
+# 🧪 Test que bg est bien une instance de BaseGeometry
+>>> isinstance(bg, BaseGeometry)
+True
+>>> type(bg).__name__
+'BaseGeometry'
