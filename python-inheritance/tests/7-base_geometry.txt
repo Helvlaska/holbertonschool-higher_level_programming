@@ -46,11 +46,11 @@ Traceback (most recent call last):
 ...
 TypeError: age must be an integer
 
-# 🧪 integer_validator avec un seul paramètre (None)
->>> bg.integer_validator(None)
+# 🧪 integer_validator avec (None, None)
+>>> bg.integer_validator(None, None)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: None must be an integer
 
 # ❌ Test avec une valeur <= 0
 >>> bg.integer_validator("size", 0)
