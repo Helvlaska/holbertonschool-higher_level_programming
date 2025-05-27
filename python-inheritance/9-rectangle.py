@@ -46,7 +46,7 @@ class Rectangle(BaseGeometry):
             int: Le produit de la largeur et de la hauteur.
         """
         return (self.__width * self.__height)
-    
+
     def __str__(self):
         """
         Retourne une représentation textuelle du rectangle.
@@ -58,4 +58,3 @@ class Rectangle(BaseGeometry):
             str: Représentation formatée du rectangle.
         """
         return (f"[Rectangle] {self.__width}/{self.__height}")
-    
