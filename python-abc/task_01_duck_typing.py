@@ -5,11 +5,11 @@ import math
 
 class Shape(ABC):
     @abstractmethod
-    def area():
+    def area(self):
         pass
 
     @abstractmethod
-    def perimeter():
+    def perimeter(self):
         pass
 
 
