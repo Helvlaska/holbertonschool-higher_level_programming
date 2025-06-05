@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """
-Module 9-student
+Module 10-student
 Définit une classe Student avec des attributs publics et une méthode
 permettant de récupérer un dictionnaire prêt à être sérialisé en JSON.
 """
-import sys
 
 
 class Student():
