@@ -32,7 +32,7 @@ class Student():
         """
         Retourne un dictionnaire contenant les attributs de l'étudiant.
 
-        Ce dictionnaire peut être utilisé directement pour une sérialisation en JSON.
+        Ce dictionnaire peut être utilisé directement pour une sérialisation.
 
         Returns:
             dict: Les attributs de l'instance sous forme clé/valeur.
