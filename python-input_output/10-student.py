@@ -43,20 +43,18 @@ class Student():
         """
         # vérifie que tous les item de la liste sont des chaînes de caractères
         if isinstance(attrs, list):
-            is_string = True # initialise le booleen à true
-            for element in attrs: # ont boucle sur la liste d'attributs                
-                if not isinstance(element, str): # si l'item n'est pas une string
-                    is_string = False # booleen à false
-                    break # sortie de la boucle
-        
-            # Si attrs est une liste et que tous ses éléments sont des chaînes
-            if is_string: # si le booleen est true
-                dictionnaire_filtré = {} # créer un dictionnaire vide
-                for key in attrs: # boucle sur la liste
-                    if key in self.__dict__: # si la key est dans la liste d'attribut
-                        valeur = self.__dict__[key] # on récupère la valeur de la clef
-                        dictionnaire_filtré[key] = valeur # on ajoute la paire cle/valeur
-                return dictionnaire_filtré # on retourne le dictionnaire
+            is_string = True
+            for element in attrs:
+                if not isinstance(element, str):
+                    is_string = False
+                    break
 
-        # Si attrs est None ou pas une liste valide → on retourne tous les attributs
+            # Si attrs est une liste et que tous ses éléments sont des chaînes
+            if is_string:
+                dictionnaire_filtré = {}
+                for key in attrs:
+                    if key in self.__dict__:
+                        valeur = self.__dict__[key]
+                        dictionnaire_filtré[key] = valeur
+                return dictionnaire_filtré
         return self.__dict__
