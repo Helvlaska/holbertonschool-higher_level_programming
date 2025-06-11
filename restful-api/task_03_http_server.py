@@ -60,6 +60,24 @@ class Api_test(BaseHTTPRequestHandler):
             reponse = {"message": "OK"}
             # Je convertis ma réponse sous le bon format (json)
             self.wfile.write(json.dumps(reponse).encode("utf-8"))
+        # Je vérifie si l'url est "/info"
+        elif self.path == "/info":
+            # Si c'est bien /info
+            # Je renvoie le code status que tout s'est bien passé
+            self.send_response(200)
+            # J'ouvre un header
+            # Je dis sous quel format je renvoie la réponse
+            self.send_header("Content-type", "application/json")
+            # Je ferme le header
+            self.end_headers()
+            # Je crée le contenue de ma réponse
+            # sous forme de dictionnaire python
+            reponse = {
+                "version": "1.0",
+                "description": "A simple API built with http.server"
+            }
+            # Je convertis ma réponse sous le bon format (json)
+            self.wfile.write(json.dumps(reponse).encode("utf-8"))
         # Si ça ne marche pas et que je n'atteinds pas l'url
         else:
             # Je renvoie un code d'erreur
