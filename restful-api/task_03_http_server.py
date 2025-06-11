@@ -37,14 +37,12 @@ class Api_test(BaseHTTPRequestHandler):
             self.send_response(200)
             # J'ouvre un header
             # Je dis sous quel format je renvoie la réponse
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/plain")
             # Je ferme le header
             self.end_headers()
             # Je crée le contenue de ma réponse
-            # sous forme de dictionnaire python
-            reponse = {"message": "Hello, this is a simple API!"}
             # Je convertis ma réponse sous le bon format (json)
-            self.wfile.write(json.dumps(reponse).encode("utf-8"))
+            self.wfile.write(b"Hello, this is a simple API!")
         # Je vérifie si l'url est "/status"
         elif self.path == "/status":
             # Si c'est bien /status
@@ -52,14 +50,12 @@ class Api_test(BaseHTTPRequestHandler):
             self.send_response(200)
             # J'ouvre un header
             # Je dis sous quel format je renvoie la réponse
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/plain")
             # Je ferme le header
             self.end_headers()
-            # Je crée le contenue de ma réponse
-            # sous forme de dictionnaire python
-            reponse = {"message": "OK"}
+            # Je crée le contenu de ma réponse
             # Je convertis ma réponse sous le bon format (json)
-            self.wfile.write(json.dumps(reponse).encode("utf-8"))
+            self.wfile.write(b"OK")
         # Je vérifie si l'url est "/info"
         elif self.path == "/info":
             # Si c'est bien /info
