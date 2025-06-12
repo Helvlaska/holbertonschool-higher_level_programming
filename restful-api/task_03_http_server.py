@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
+"""
+Ce module implémente un serveur HTTP simple avec Python.
 
+Il gère les requêtes GET sur différentes routes et renvoie des réponses
+au format texte ou JSON selon l’URL demandée.
+"""
 # J'importe la methode de la bibliothèque http.server
 from http.server import BaseHTTPRequestHandler, HTTPServer
 # J'import json pour la convertion de données
@@ -10,8 +15,24 @@ import json
 
 
 class Api_test(BaseHTTPRequestHandler):
+    """
+    Classe héritée de BaseHTTPRequestHandler
+    pour gérer des routes HTTP simples.
+
+    Elle définit la méthode do_GET() pour répondre aux requêtes GET
+    sur différentes URLs comme /, /data, /status et /info.
+    """
     # Création methode pour gérer les requêtes GET
     def do_GET(self):
+        """
+        Gère les requêtes GET entrantes selon l’URL demandée.
+
+        - "/"       : Renvoie un message d’accueil (texte brut)
+        - "/data"   : Renvoie un objet JSON avec nom, âge et ville
+        - "/status" : Renvoie "OK" (texte brut)
+        - "/info"   : Renvoie des métadonnées de l’API (JSON)
+        - autres    : Renvoie une erreur 404 (JSON)
+        """
         # Je vérifie si l'url est /data
         # /hello, /trucMuche ont s'en fiche c'est pour test
         # par ce que en réalité ça ressemble à ça :
