@@ -85,7 +85,7 @@ class Api_test(BaseHTTPRequestHandler):
             self.end_headers()
             # Je crée le contenu de ma réponse
             # sous forme de dictionnaire python
-            reponse = {"message": "Oops ! request fail !"}
+            reponse = {"message": "404 Not Found"}
             # Je convertis ma réponse sous le bon format (json)
             self.wfile.write(json.dumps(reponse).encode("utf-8"))
 
