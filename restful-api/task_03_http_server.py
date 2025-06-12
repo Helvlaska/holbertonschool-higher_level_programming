@@ -80,14 +80,12 @@ class Api_test(BaseHTTPRequestHandler):
             self.send_response(404)
             # J'ouvre un header
             # Je dis sous quel format je renvoie la réponse
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/plain")
             # Je ferme le header
             self.end_headers()
             # Je crée le contenu de ma réponse
-            # sous forme de dictionnaire python
-            reponse = {"message": "404 Not Found"}
             # Je convertis ma réponse sous le bon format (json)
-            self.wfile.write(json.dumps(reponse).encode("utf-8"))
+            self.wfile.write(b"404 Not Found")
 
 
 if __name__ == "__main__":
