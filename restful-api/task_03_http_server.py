@@ -37,7 +37,20 @@ class Api_test(BaseHTTPRequestHandler):
         # /hello, /trucMuche ont s'en fiche c'est pour test
         # par ce que en réalité ça ressemble à ça :
         # http://localhost:8000/hello
-        if self.path == "/data":
+        if self.path == "/":
+            # Si c'est bien /
+            # Je renvoie le code status que tout s'est bien passé
+            self.send_response(200)
+            # J'ouvre un header
+            # Je dis sous quel format je renvoie la réponse
+            self.send_header("Content-type", "text/plain")
+            # Je ferme le header
+            self.end_headers()
+            # Je crée le contenue de ma réponse
+            # Je convertis ma réponse sous le bon format (json)
+            self.wfile.write(b"Hello, this is a simple API!")
+        # Je vérifie si l'url est "/"
+        elif self.path == "/data":
             # Si c'est bien /hello
             # Je renvoie le code status que tout s'est bien passé
             self.send_response(200)
@@ -51,19 +64,6 @@ class Api_test(BaseHTTPRequestHandler):
             reponse = {"name": "John", "age": 30, "city": "New York"}
             # Je convertis ma réponse sous le bon format (json)
             self.wfile.write(json.dumps(reponse).encode("utf-8"))
-        # Je vérifie si l'url est "/"
-        elif self.path == "/":
-            # Si c'est bien /
-            # Je renvoie le code status que tout s'est bien passé
-            self.send_response(200)
-            # J'ouvre un header
-            # Je dis sous quel format je renvoie la réponse
-            self.send_header("Content-type", "text/plain")
-            # Je ferme le header
-            self.end_headers()
-            # Je crée le contenue de ma réponse
-            # Je convertis ma réponse sous le bon format (json)
-            self.wfile.write(b"Hello, this is a simple API!")
         # Je vérifie si l'url est "/status"
         elif self.path == "/status":
             # Si c'est bien /status
@@ -106,7 +106,7 @@ class Api_test(BaseHTTPRequestHandler):
             self.end_headers()
             # Je crée le contenu de ma réponse
             # Je convertis ma réponse sous le bon format (json)
-            self.wfile.write(b"404 Not Found")
+            self.wfile.write("Endpoint not found".encode("utf-8"))
 
 
 if __name__ == "__main__":
