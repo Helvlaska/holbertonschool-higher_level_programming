@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Script qui se connecte à une base de données MySQL et affiche
 toutes les entrées de la table `states`."""
-import MySQLdb, sys
+import MySQLdb
+import sys
 
 
 if __name__ == "__main__":
@@ -14,8 +15,8 @@ if __name__ == "__main__":
     """
     # Connexion à la BDD
     connexion = MySQLdb.connect(
-        host = "localhost",
-        port = 3306,
+        host="localhost",
+        port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3]
