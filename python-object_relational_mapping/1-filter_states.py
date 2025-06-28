@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # qui commencent par un 'N'
     curseur.execute("""
         SELECT * FROM states
-        WHERE name LIKE 'N%'
+        WHERE BINARY name LIKE 'N%'
         ORDER BY id
     """)
 
