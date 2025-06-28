@@ -25,10 +25,11 @@ if __name__ == "__main__":
     curseur = connexion.cursor()
 
     # Requête pour récupérer tout les states de la BDD
+    # qui commencent par un 'N'
     curseur.execute("""
         SELECT * FROM states
         WHERE name LIKE 'N%'
-        ORDER BY id ASC
+        ORDER BY id
     """)
 
     # Récupération de la requête
