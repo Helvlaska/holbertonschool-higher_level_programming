@@ -33,7 +33,7 @@ if __name__ == "__main__":
     # correspondant à l'argument
     curseur.execute("""
         SELECT * FROM states
-        WHERE name = %s
+        WHERE BINARY name = %s
         ORDER BY id
     """, (pays,))
 
