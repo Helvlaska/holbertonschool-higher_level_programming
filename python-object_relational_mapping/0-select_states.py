@@ -26,7 +26,7 @@ if __name__ == "__main__":
     curseur = connexion.cursor()
 
     # Requête pour récupérer tout les states de la BDD
-    curseur.execute("SELECT * FROM states")
+    curseur.execute("SELECT * FROM states ORDER BY id")
 
     # Récupération de la requête
     lignes = curseur.fetchall()
