@@ -33,9 +33,9 @@ if __name__ == "__main__":
     # correspondant à l'argument
     curseur.execute("""
         SELECT * FROM states
-        WHERE BINARY name = %s
+        WHERE BINARY name = '{}'
         ORDER BY id
-    """, (pays,))
+    """.format(pays))
 
     # Récupération de la requête
     lignes = curseur.fetchall()
