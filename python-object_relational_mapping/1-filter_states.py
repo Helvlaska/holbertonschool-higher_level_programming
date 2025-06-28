@@ -28,7 +28,7 @@ if __name__ == "__main__":
     curseur.execute("""
         SELECT * FROM states
         WHERE name LIKE 'N%'
-        ORDER BY id
+        ORDER BY id ASC
     """)
 
     # Récupération de la requête
