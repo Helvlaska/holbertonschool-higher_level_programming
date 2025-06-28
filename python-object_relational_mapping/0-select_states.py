@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Script qui se connecte à une base de données MySQL et affiche
 toutes les entrées de la table `states`."""
 import MySQLdb
