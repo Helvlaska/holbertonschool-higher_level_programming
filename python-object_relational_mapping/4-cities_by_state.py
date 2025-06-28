@@ -1,4 +1,4 @@
-#!/usr/bin/ python3
+#!/usr/bin/python3
 """Script qui affiche toutes les villes de la base de données, ainsi que
 le nom de leur état respectif, triées par identifiant de ville."""
 import MySQLdb
