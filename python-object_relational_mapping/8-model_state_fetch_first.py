@@ -22,11 +22,13 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Requête pour la récupération de tout les pays
-    states = session.query(State).filter(State.id == 1)
+    # Requête pour récupérer l'état avec id = 1
+    state = session.query(State).filter(State.id == 1).first()
 
-    # Boucle pour print les résultats de la requête
-    for state in states:
+    # Vérification du résultat
+    if state is None:
+        print("Nothing")
+    else:
         print(f"{state.id}: {state.name}")
 
     # Fermeture propre de la session
