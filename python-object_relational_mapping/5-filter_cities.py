@@ -1,8 +1,19 @@
 #!/usr/bin/python3
+"""Script qui affiche les villes d’un État donné
+depuis une base de données MySQL."""
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """
+    Point d’entrée du script.
+    Utilise les arguments passés en ligne de commande :
+    - argv[1] : nom d'utilisateur MySQL
+    - argv[2] : mot de passe MySQL
+    - argv[3] : nom de la base de données
+    - argv[4] : nom de l'État dont on veut afficher
+    les villes (sensible à la casse)
+    """
     # Connexion à la BDD
     connexion = MySQLdb.connect(
         host="localhost",
