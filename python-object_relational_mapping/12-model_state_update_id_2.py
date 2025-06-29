@@ -27,8 +27,10 @@ if __name__ == "__main__":
         session.query(State)
         .get(2)
     )
-    state.name = 'New Mexico'
-    session.commit()
+    # Vérifie si l'objet existe, et si oui le modifie
+    if state:
+        state.name = 'New Mexico'
+        session.commit()
 
     # Fermeture propre de la session
     session.close()
