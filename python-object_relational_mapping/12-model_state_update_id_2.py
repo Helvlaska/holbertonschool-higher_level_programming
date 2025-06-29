@@ -24,8 +24,7 @@ if __name__ == "__main__":
 
     # Modification du nom de l'objet
     state = (
-        session.query(State)
-        .get(2)
+        session.query(State, 2)
     )
     # Vérifie si l'objet existe, et si oui le modifie
     if state:
