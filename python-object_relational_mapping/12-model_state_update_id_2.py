@@ -25,12 +25,13 @@ if __name__ == "__main__":
     # Modification du nom de l'objet
     state = (
         session.query(State)
-        .get(2)
+        .filter_by(id=2)
+        .first()
     )
     # Vérifie si l'objet existe, et si oui le modifie
-    # if state:
-    state.name = 'New Mexico'
-    session.commit()
+    if state is not None:
+        state.name = 'New Mexico'
+        session.commit()
 
     # Fermeture propre de la session
     session.close()
