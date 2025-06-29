@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Définit la classe State qui représente la table 'states' dans la base de
 données, en utilisant SQLAlchemy comme ORM.
