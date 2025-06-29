@@ -29,8 +29,9 @@ if __name__ == "__main__":
         .all()
     )
     # Mise à jour de la BDD
-    for state in states_to_delete:
-        session.delete(state)
+    if states_to_delete:
+        for state in states_to_delete:
+            session.delete(state)
         session.commit()
 
     # Fermeture propre de la session
