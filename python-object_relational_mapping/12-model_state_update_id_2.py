@@ -23,10 +23,8 @@ if __name__ == "__main__":
     session = Session()
 
     # Modification du nom de l'objet
-    state = (
-        session.query(State)
-        .get(2)
-    )
+    state = session.get(State, 2)
+
     # Vérifie si l'objet existe, et si oui le modifie
     if state:
         state.name = 'New Mexico'
