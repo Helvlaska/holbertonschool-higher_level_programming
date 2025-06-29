@@ -23,7 +23,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Modification du nom de l'objet
-    state =(
+    state = (
         session.query(State)
         .get(2)
     )
