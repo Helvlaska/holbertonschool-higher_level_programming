@@ -1,10 +1,22 @@
+"""
+Définit la classe State qui représente la table 'states' dans la base de données,
+en utilisant SQLAlchemy comme ORM.
+"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 class State(Base):
+    """
+    Classe représentant un état américain.
+
+    Hérite de Base pour créer une table 'states' via SQLAlchemy.
+    Attributs :
+        id (int) : Identifiant unique de l'état, clé primaire.
+        name (str) : Nom de l'état, non nul, chaîne de max 128 caractères.
+    """
     __tablename__= 'states'
 
-    id = Column(Integer(11), autoincrement=True, nullable=False, primary_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
