@@ -23,7 +23,12 @@ if __name__ == "__main__":
     session = Session()
 
     # Requête pour la récupération de tout les pays
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = (
+        session.query(State)
+        .filter(State.name.like('%a%'))
+        .order_by(State.id)
+        .all()
+    )
 
     # Boucle pour print les résultats de la requête
     for state in states:
