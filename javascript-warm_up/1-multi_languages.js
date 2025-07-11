@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const c_langue = 'C is fun';
-const python_langue = 'Python is cool';
-const js_langue = 'JavaScript is amazing';
+const line1 = 'C is fun';
+const line2 = 'Python is cool';
+const line3 = 'JavaScript is amazing';
 
-console.log(`${c_langue}\n${python_langue}\n${js_langue}`);
+console.log(`${line1}\n${line2}\n${line3}`);
